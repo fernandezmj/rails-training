@@ -11,6 +11,25 @@ describe 'Checkout Process', type: :feature do
       it 'displays the product in the cart' do
         expect(page).to have_content 'TicketBase generic ticket' 
       end
+
+      it 'dislplays the quantity of the product' do
+        expect(page).to have_content '1 x'
+      end
+
+      it 'displays the total of the cart' do
+        expect(page).to have_content 'P200.00'
+      end
+
+      # context 'and the user presses the Empty Cart button' do
+      #   before do
+      #     click_button 'Empty cart'
+      #     page.driver.accept_js_confirms!
+      #   end
+
+      #   it 'empties the cart', js: true do
+      #     expect(page).to have_content 'Cart was successfully emptied.'
+      #   end
+      # end
     end
 
     context 'when there are products in the store' do
