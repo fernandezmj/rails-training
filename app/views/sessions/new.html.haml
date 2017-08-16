@@ -1,5 +1,5 @@
 .depot_form
-  - if flash[:alert]
+  - if flash[:alert] || flash[:notice]
     %p#notice= flash[:alert]
 
   = form_tag do
